@@ -525,7 +525,7 @@ export default function Home() {
               </h2>
 
               <p className="mt-6 text-xl text-white/60 leading-relaxed">
-                Что если +1€ к часу снижает усталость и травмы?
+                Что если +1€ к часу работы сотрудника снижает усталость и травмы?
               </p>
             </div>
           </Reveal>
