@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     siteName: "Human+",
     images: [
       {
-        url: "/images/suitx.avif",
+        url: "/images/og.jpg",
         width: 1200,
         height: 630,
         alt: "Human+ Exoskeleton",
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     title: "Экзоскелеты для бизнеса | Human+",
     description:
       "Снижение нагрузки до 40% и рост производительности сотрудников.",
-    images: ["/images/suitx.avif"],
+    images: ["/images/og.jpg"],
   },
 
   metadataBase: new URL("https://humanplus.work"),
