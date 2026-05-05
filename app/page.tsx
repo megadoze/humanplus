@@ -181,7 +181,7 @@ export default function Home() {
           </div>
         </nav>
 
-        <div className="relative z-10 grid lg:grid-cols-[minmax(0,1fr)_460px] xl:grid-cols-[minmax(0,1fr)_500px] gap-12 items-center pt-20 md:pt-28">
+        <div className="relative z-10 grid lg:grid-cols-[minmax(0,1fr)_460px] xl:grid-cols-[minmax(0,1fr)_500px] gap-12 items-center pt-16 md:pt-20">
           <div className="min-w-0 text-center md:text-left">
             <p className="animate-fade-up text-[#00ff8c] uppercase tracking-[0.25em] text-xs font-black">
               Exoskeleton Solutions
@@ -192,7 +192,7 @@ export default function Home() {
                 Увеличьте эффективность команды
               </span>
 
-              <span className="block min-h-[2.1em] md:min-h-[1.1em]">
+              <span className="block min-h-[2em] md:min-h-[1.1em]">
                 <span className="typing-line pb-2">
                   {text}
                   <span className="typing-cursor" />
@@ -201,7 +201,7 @@ export default function Home() {
             </h1>
 
             <p
-              className="mt-6 text-lg md:text-3xl font-bold text-white animate-fade-up"
+              className="md:mt-6 text-lg md:text-3xl text-white animate-fade-up"
               style={{ animationDelay: "250ms" }}
             >
               Больше силы. Меньше боли.
