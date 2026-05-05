@@ -201,7 +201,7 @@ export default function Home() {
               Exoskeleton Solutions
             </p>
 
-            <h1 className="mt-6 text-[clamp(2.1rem,10vw,3rem)] md:text-6xl xl:text-6xl 2xl:text-7xl font-black leading-[1.1] xl:leading-[0.95] tracking-[-0.04em]">
+            <h1 className="mt-6 text-[clamp(1.8rem,9vw,3rem)] md:text-6xl xl:text-6xl 2xl:text-7xl font-black leading-[1.1] xl:leading-[0.95] tracking-[-0.04em]">
               <span className="block animate-fade-up">Снижение нагрузки</span>
 
               <span className="block min-h-[2.1em] md:min-h-[1.1em]">
@@ -503,7 +503,7 @@ export default function Home() {
                     <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-[#00ff8c] text-sm font-black text-black">
                       {num}
                     </span>
-                    <p className="md:text-lg md:font-bold text-white/85">
+                    <p className="md:text-lg md:font-bold text-white/85 text-left">
                       {item}
                     </p>
                   </div>
