@@ -64,7 +64,7 @@ function Reveal({
 function VideoOnView({
   src,
   className = "",
-  label,
+  // label,
   preload = "none",
 }: {
   src: string;
@@ -127,16 +127,16 @@ function VideoOnView({
         src={src}
       />
 
-      <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(180deg,rgba(0,0,0,0.05),rgba(0,0,0,0.55))]" />
+      <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(180deg,rgba(0,0,0,0.04),rgba(0,0,0,0.05))]" />
 
       <div className="absolute -right-24 -top-24 h-64 w-64 rounded-full bg-[#00ff8c]/20 blur-3xl pointer-events-none" />
       <div className="absolute -left-24 -bottom-24 h-64 w-64 rounded-full bg-[#00ff8c]/10 blur-3xl pointer-events-none" />
 
-      {label && (
+      {/* {label && (
         <div className="absolute bottom-6 left-6 px-4 py-2 rounded-full bg-black/60 text-white text-sm font-bold pointer-events-none">
           {label}
         </div>
-      )}
+      )} */}
 
       <Equalizer muted={muted || !visible} />
     </div>
@@ -182,7 +182,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_85%_20%,rgba(0,255,140,0.18),transparent_36%)]" />
         </div>
 
-        <nav className="relative z-10 flex items-center justify-between animate-fade-down">
+        <nav className="relative z-10 flex items-center justify-center md:justify-normal animate-fade-down">
           <div className="text-3xl font-black tracking-tight">
             Human<span className="text-[#00ff8c] pl-0.5">+</span>
           </div>
@@ -196,12 +196,12 @@ export default function Home() {
         </nav>
 
         <div className="relative z-10 grid lg:grid-cols-[minmax(0,1fr)_460px] xl:grid-cols-[minmax(0,1fr)_500px] gap-12 items-center pt-20 md:pt-28">
-          <div className="min-w-0">
+          <div className="min-w-0 text-center md:text-left">
             <p className="animate-fade-up text-[#00ff8c] uppercase tracking-[0.25em] text-xs font-black">
               Exoskeleton Solutions
             </p>
 
-            <h1 className="mt-6 text-[clamp(2.4rem,10vw,3.6rem)] md:text-6xl xl:text-6xl 2xl:text-7xl font-black leading-[1.05] xl:leading-[0.95] tracking-[-0.04em]">
+            <h1 className="mt-6 text-[clamp(2.4rem,10vw,3rem)] md:text-6xl xl:text-6xl 2xl:text-7xl font-black leading-[1.1] xl:leading-[0.95] tracking-[-0.04em]">
               <span className="block animate-fade-up">Снижение нагрузки</span>
 
               <span className="block min-h-[2.1em] md:min-h-[1.1em]">
@@ -213,14 +213,14 @@ export default function Home() {
             </h1>
 
             <p
-              className="mt-6 text-2xl md:text-3xl font-bold text-white animate-fade-up"
+              className="mt-6 text-xl md:text-3xl font-bold text-white animate-fade-up"
               style={{ animationDelay: "250ms" }}
             >
               Больше силы. Меньше боли.
             </p>
 
             <p
-              className="mt-6 max-w-2xl text-lg md:text-xl text-white/55 leading-relaxed animate-fade-up"
+              className="mt-6 max-w-2xl md:text-lg md:text-xl text-white/55 leading-relaxed animate-fade-up"
               style={{ animationDelay: "350ms" }}
             >
               Human+ помогает компаниям уменьшить травмы и усталость сотрудников
@@ -228,19 +228,19 @@ export default function Home() {
             </p>
 
             <div
-              className="mt-10 flex flex-wrap gap-4 animate-fade-up"
+              className="mt-10 flex justify-center md:justify-normal flex-wrap gap-4 animate-fade-up text-sm md:text-base"
               style={{ animationDelay: "450ms" }}
             >
               <a
                 href="#test"
-                className="rounded-full bg-[#00ff8c] text-black px-7 py-4 font-black hover:scale-105 transition"
+                className="rounded-full bg-[#00ff8c] text-black px-7 py-4 md:font-black hover:scale-105 transition"
               >
                 Начать тест
               </a>
 
               <a
                 href="#how"
-                className="rounded-full border border-white/15 px-7 py-4 font-black hover:bg-white hover:text-black transition"
+                className="rounded-full border border-white/15 px-7 py-4 md:font-black hover:bg-white hover:text-black transition duration-400 ease-in-out"
               >
                 Как это работает
               </a>
@@ -277,13 +277,13 @@ export default function Home() {
         </section>
       </Reveal>
 
-      <section className="px-6 md:px-16 py-28">
+      <section className="px-6 md:px-16 py-28 text-center md:text-left">
         <Reveal>
           <p className="text-[#00ff8c] uppercase tracking-[0.25em] text-xs font-black">
             Problem
           </p>
 
-          <h2 className="mt-4 max-w-4xl text-4xl md:text-6xl font-black leading-[0.95] tracking-[-0.04em]">
+          <h2 className="mt-4 max-w-4xl text-4xl md:text-6xl font-black md:leading-[0.95] tracking-[-0.04em]">
             Физическая работа <br />
             <span> не должна ломать людей</span>
           </h2>
@@ -300,35 +300,37 @@ export default function Home() {
           ].map(([title, body], index) => (
             <Reveal key={title} delay={index * 120}>
               <div className="rounded-[28px] border border-white/10 bg-white/[0.04] p-8 hover:-translate-y-2 hover:border-[#00ff8c]/40 transition">
-                <h3 className="text-2xl font-bold">{title}</h3>
-                <p className="mt-4 text-white/55 leading-relaxed">{body}</p>
+                <h3 className="text-xl md:text-2xl md:font-bold">{title}</h3>
+                <p className="mt-4 text-white/55 leading-relaxed text-sm md:text-base">
+                  {body}
+                </p>
               </div>
             </Reveal>
           ))}
         </div>
       </section>
 
-      <section className="grid md:grid-cols-2 gap-12 items-center px-6 md:px-16 py-28 bg-white/[0.03]">
+      <section className="grid md:grid-cols-2 gap-12 items-center px-6 md:px-16 py-28 bg-white/[0.03] text-center md:text-left">
         <Reveal>
           <p className="text-[#00ff8c] uppercase tracking-[0.25em] text-xs font-black">
             Solution
           </p>
 
-          <h2 className="mt-4 text-4xl md:text-6xl font-black leading-[0.95] tracking-[-0.04em]">
+          <h2 className="mt-4 text-4xl md:text-6xl font-black md:leading-[0.95] tracking-[-0.04em]">
             Усиливаем сотрудников, <br />
             <span>а не заменяем их</span>
           </h2>
         </Reveal>
 
         <Reveal delay={120}>
-          <p className="text-xl text-white/60 leading-relaxed">
+          <p className="md:text-xl text-white/60 leading-relaxed">
             Мы предоставляем экзоскелеты для спины, плеч и физической работы:
             демонстрация, тест, обучение и поддержка — всё в одной модели.
           </p>
         </Reveal>
       </section>
 
-      <section className="px-6 md:px-16 py-28 border-y border-white/10 bg-white/[0.025]">
+      <section className="px-6 md:px-16 py-28 border-y border-white/10 bg-white/[0.025] text-center md:text-left">
         <Reveal>
           <p className="text-[#00ff8c] uppercase tracking-[0.25em] text-xs font-black">
             Demo
@@ -346,13 +348,13 @@ export default function Home() {
 
           <Reveal delay={160}>
             <div>
-              <h2 className="text-4xl md:text-6xl font-black leading-[0.95] tracking-[-0.04em]">
+              <h2 className="text-4xl md:text-6xl font-black md:leading-[0.95] tracking-[-0.04em]">
                 Лучше один раз
                 <br />
                 увидеть в работе
               </h2>
 
-              <p className="mt-6 text-xl text-white/60 leading-relaxed">
+              <p className="mt-6 md:text-xl text-white/60 leading-relaxed">
                 Экзоскелет работает не в презентации, а на реальной задаче:
                 подъём, перенос, удержание рук, повторяющиеся движения.
               </p>
@@ -367,7 +369,9 @@ export default function Home() {
                     className="rounded-2xl border border-white/10 bg-black/30 p-5"
                   >
                     <p className="text-[#00ff8c] font-black">{title}</p>
-                    <p className="mt-1 text-white/60">{body}</p>
+                    <p className="mt-1 text-white/60 text-sm md:text-base">
+                      {body}
+                    </p>
                   </div>
                 ))}
               </div>
@@ -376,7 +380,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="how" className="px-6 md:px-16 py-28">
+      <section
+        id="how"
+        className="px-6 md:px-16 py-28 text-center md:text-left"
+      >
         <Reveal>
           <p className="text-[#00ff8c] uppercase tracking-[0.25em] text-xs font-black">
             Process
@@ -398,15 +405,17 @@ export default function Home() {
                 <span className="block mb-10 text-[#00ff8c] text-xl font-black">
                   {num}
                 </span>
-                <h3 className="text-2xl font-bold">{title}</h3>
-                <p className="mt-4 text-white/55 leading-relaxed">{body}</p>
+                <h3 className="text-xl md:text-2xl md:font-bold">{title}</h3>
+                <p className="mt-4 text-white/55 leading-relaxed text-sm md:text-base">
+                  {body}
+                </p>
               </div>
             </Reveal>
           ))}
         </div>
       </section>
 
-      <section className="px-6 md:px-16 py-28 bg-white/[0.025] border-y border-white/10">
+      <section className="px-6 md:px-16 py-28 bg-white/[0.025] border-y border-white/10 text-center md:text-left">
         <div className="mt-4 grid lg:grid-cols-[0.9fr_1.1fr] gap-12 items-start">
           <Reveal>
             <div>
@@ -414,12 +423,12 @@ export default function Home() {
                 Proof
               </p>
 
-              <h2 className="mt-4 text-4xl md:text-6xl font-black leading-[0.95] tracking-[-0.04em]">
+              <h2 className="mt-4 text-4xl md:text-6xl font-black md:leading-[0.95] tracking-[-0.04em]">
                 Эффект видно
                 <br />в первый день
               </h2>
 
-              <p className="mt-6 text-xl text-white/60 leading-relaxed">
+              <p className="mt-6 md:text-xl text-white/60 leading-relaxed">
                 Экзоскелет не нужно долго объяснять. Сотрудник надевает его,
                 выполняет привычную задачу — и сразу чувствует разницу.
               </p>
@@ -443,8 +452,10 @@ export default function Home() {
             ].map(([title, body], index) => (
               <Reveal key={title} delay={index * 120}>
                 <div className="rounded-[28px] border border-white/10 bg-[#101010] p-8 hover:border-[#00ff8c]/40 transition">
-                  <h3 className="text-2xl font-black">{title}</h3>
-                  <p className="mt-4 text-white/55 leading-relaxed">{body}</p>
+                  <h3 className="text-xl md:text-2xl font-black">{title}</h3>
+                  <p className="mt-4 text-white/55 leading-relaxed text-sm md:text-base">
+                    {body}
+                  </p>
                 </div>
               </Reveal>
             ))}
@@ -452,7 +463,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-6 md:px-16 py-28">
+      <section className="px-6 md:px-16 py-28 text-center md:text-left">
         <div className="mt-4 grid lg:grid-cols-2 gap-12">
           <Reveal>
             <div>
@@ -460,16 +471,16 @@ export default function Home() {
                 Business case
               </p>
 
-              <h2 className="mt-4 text-4xl md:text-6xl font-black leading-[0.95] tracking-[-0.04em]">
+              <h2 className="mt-4 text-4xl md:text-6xl font-black md:leading-[0.95] tracking-[-0.04em]">
                 Травмы стоят дороже, чем тест
               </h2>
 
-              <p className="mt-6 text-xl text-white/60 leading-relaxed">
+              <p className="mt-6 md:text-xl text-white/60 leading-relaxed">
                 Запустите тест в своей компании и посмотрите, снижает ли Human+
                 нагрузку на сотрудников в реальной работе.
               </p>
 
-              <p className="mt-4 text-lg text-white/50 leading-relaxed">
+              <p className="mt-4 text-sm md:text-lg text-white/50 leading-relaxed">
                 Без покупки оборудования. Без риска. Только фактический
                 результат.
               </p>
@@ -477,7 +488,7 @@ export default function Home() {
           </Reveal>
 
           <Reveal delay={120}>
-            <div className="rounded-[36px] border border-white/10 bg-white/[0.04] p-8 md:p-10 shadow-[0_0_100px_rgba(0,255,140,0.08)]">
+            <div className="rounded-[36px] md:border border-white/10 bg-white/[0.04] md:p-8 md:p-10 shadow-[0_0_100px_rgba(0,255,140,0.08)]">
               <div className="grid gap-5">
                 {[
                   ["01", "Снижение риска травм"],
@@ -492,13 +503,15 @@ export default function Home() {
                     <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-[#00ff8c] text-sm font-black text-black">
                       {num}
                     </span>
-                    <p className="text-lg font-bold text-white/85">{item}</p>
+                    <p className="md:text-lg md:font-bold text-white/85">
+                      {item}
+                    </p>
                   </div>
                 ))}
               </div>
 
               <div className="mt-8 rounded-3xl bg-[#00ff8c] p-6 text-black">
-                <p className="text-sm font-black uppercase tracking-[0.18em]">
+                <p className="text-sm md:font-black uppercase tracking-[0.18em]">
                   Без риска
                 </p>
                 <p className="mt-3 text-2xl font-black leading-tight">
@@ -510,7 +523,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-6 md:px-16 py-28 bg-white/[0.025] border-y border-white/10">
+      <section className="px-6 md:px-16 py-28 bg-white/[0.025] border-y border-white/10 text-center md:text-left">
         <div className="mt-4 grid lg:grid-cols-[0.9fr_1.1fr] gap-12 items-start">
           <Reveal>
             <div>
@@ -518,20 +531,21 @@ export default function Home() {
                 Economics
               </p>
 
-              <h2 className="mt-4 text-4xl md:text-6xl font-black leading-[0.95] tracking-[-0.04em]">
+              <h2 className="mt-4 text-4xl md:text-6xl font-black md:leading-[0.95] tracking-[-0.04em]">
                 Сколько стоит
                 <br />
                 усталость?
               </h2>
 
-              <p className="mt-6 text-xl text-white/60 leading-relaxed">
-                Что если +1€ к часу работы сотрудника снижает усталость и травмы?
+              <p className="mt-6 md:text-xl text-white/60 leading-relaxed">
+                Что если всего +1€ к часу оплаты труда повысит
+                производительность и снизит потери до 40%?
               </p>
             </div>
           </Reveal>
 
           <Reveal delay={120}>
-            <div className="rounded-[36px] border border-white/10 bg-white/[0.04] p-8 md:p-10 shadow-[0_0_100px_rgba(0,255,140,0.08)]">
+            <div className="rounded-[36px] md:border border-white/10 bg-white/[0.04] md:p-8 md:p-10 shadow-[0_0_100px_rgba(0,255,140,0.08)]">
               <div className="grid gap-4">
                 {[
                   ["+1€ / час", "условная стоимость дополнительной защиты"],
@@ -542,7 +556,9 @@ export default function Home() {
                     key={num}
                     className="flex items-center justify-between gap-5 rounded-2xl border border-white/10 bg-black/30 p-5"
                   >
-                    <p className="text-2xl font-black text-[#00ff8c]">{num}</p>
+                    <p className="text-lg md:text-2xl font-black text-[#00ff8c]">
+                      {num}
+                    </p>
                     <p className="max-w-[260px] text-right text-white/60">
                       {item}
                     </p>
@@ -554,7 +570,7 @@ export default function Home() {
                 <p className="text-sm font-black uppercase tracking-[0.18em]">
                   Простая логика
                 </p>
-                <p className="mt-3 text-2xl font-black leading-tight">
+                <p className="mt-3 text-xl md:text-2xl md:font-black leading-tight">
                   Не спорьте с цифрами. Протестируйте Human+ на своей команде и
                   посмотрите, окупается ли снижение нагрузки.
                 </p>
@@ -570,7 +586,7 @@ export default function Home() {
             Прозрачная модель без крупных вложений
           </h2>
 
-          <p className="mt-6 text-xl text-white/60 max-w-2xl mx-auto">
+          <p className="mt-6 md:text-xl text-white/60 max-w-2xl mx-auto">
             Вы не покупаете оборудование сразу. Human+ работает по модели теста
             и последующей аренды.
           </p>
@@ -585,7 +601,7 @@ export default function Home() {
             <Reveal key={label} delay={index * 120}>
               <div className="rounded-2xl border border-white/10 p-6">
                 <p className="text-sm text-white/50">{label}</p>
-                <p className="mt-2 text-4xl font-black">{price}</p>
+                <p className="mt-2 text-xl md:text-4xl font-black">{price}</p>
                 <p className="mt-2 text-white/50">{note}</p>
               </div>
             </Reveal>
@@ -599,7 +615,7 @@ export default function Home() {
         </Reveal>
       </section>
 
-      <section className="px-6 md:px-16 py-24">
+      <section className="px-6 md:px-16 py-24 text-center md:text-left">
         <Reveal>
           <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-12 items-center rounded-[36px] border border-white/10 bg-white/[0.03] p-8 md:p-12 overflow-hidden relative">
             <div className="absolute -right-24 -top-24 h-64 w-64 rounded-full bg-[#00ff8c]/15 blur-3xl" />
@@ -609,13 +625,13 @@ export default function Home() {
                 7-day result
               </p>
 
-              <h2 className="mt-4 text-4xl md:text-6xl font-black leading-[0.95] tracking-[-0.04em]">
+              <h2 className="mt-4 text-4xl md:text-6xl font-black md:leading-[0.95] tracking-[-0.04em]">
                 Что покажет тест
                 <br />
                 за 7 дней
               </h2>
 
-              <p className="mt-6 text-xl text-white/60 leading-relaxed">
+              <p className="mt-6 md:text-xl text-white/60 leading-relaxed">
                 Тест показывает не обещания, а реальные сигналы: носит ли
                 команда экзоскелет, чувствует ли разницу и есть ли смысл
                 масштабировать.
@@ -650,8 +666,12 @@ export default function Home() {
                     </span>
 
                     <div>
-                      <h3 className="text-xl font-black text-white">{title}</h3>
-                      <p className="mt-1 text-white/55">{body}</p>
+                      <h3 className="md:text-xl font-black text-white">
+                        {title}
+                      </h3>
+                      <p className="mt-1 text-white/55 text-sm text-base">
+                        {body}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -695,13 +715,13 @@ export default function Home() {
             Попробуйте Human+ на своей команде
           </h2>
 
-          <p className="mt-6 text-xl text-white/60">
+          <p className="mt-6 md:text-xl text-white/60">
             1 неделя теста в реальной работе. Без покупки. Без риска.
           </p>
 
           <a
             href="mailto:hello@humanplus.work"
-            className="mt-10 inline-block rounded-full bg-[#00ff8c] text-black px-7 py-4 font-black hover:scale-105 transition"
+            className="mt-10 inline-block rounded-full bg-[#00ff8c] text-black text-sm md:text-base px-7 py-4 md:font-black hover:scale-105 transition"
           >
             Начать тест
           </a>
