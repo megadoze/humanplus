@@ -201,7 +201,7 @@ export default function Home() {
               Exoskeleton Solutions
             </p>
 
-            <h1 className="mt-6 text-[clamp(2.4rem,10vw,3rem)] md:text-6xl xl:text-6xl 2xl:text-7xl font-black leading-[1.1] xl:leading-[0.95] tracking-[-0.04em]">
+            <h1 className="mt-6 text-[clamp(2.1rem,10vw,3rem)] md:text-6xl xl:text-6xl 2xl:text-7xl font-black leading-[1.1] xl:leading-[0.95] tracking-[-0.04em]">
               <span className="block animate-fade-up">Снижение нагрузки</span>
 
               <span className="block min-h-[2.1em] md:min-h-[1.1em]">
@@ -511,10 +511,10 @@ export default function Home() {
               </div>
 
               <div className="mt-8 rounded-3xl bg-[#00ff8c] p-6 text-black">
-                <p className="text-sm md:font-black uppercase tracking-[0.18em]">
+                <p className="text-sm font-mono uppercase tracking-[0.18em]">
                   Без риска
                 </p>
-                <p className="mt-3 text-2xl font-black leading-tight">
+                <p className="mt-3 text-lg md:text-2xl leading-tight">
                   Сначала тест — потом решение.
                 </p>
               </div>
@@ -556,10 +556,10 @@ export default function Home() {
                     key={num}
                     className="flex items-center justify-between gap-5 rounded-2xl border border-white/10 bg-black/30 p-5"
                   >
-                    <p className="text-lg md:text-2xl font-black text-[#00ff8c]">
+                    <p className="text-base md:text-2xl font-black text-[#00ff8c]">
                       {num}
                     </p>
-                    <p className="max-w-[260px] text-right text-white/60">
+                    <p className="max-w-[260px] text-right text-white/60 text-sm md:text-base flex-1">
                       {item}
                     </p>
                   </div>
@@ -567,10 +567,10 @@ export default function Home() {
               </div>
 
               <div className="mt-8 rounded-3xl bg-[#00ff8c] p-6 text-black">
-                <p className="text-sm font-black uppercase tracking-[0.18em]">
+                <p className="text-sm font-mono uppercase tracking-[0.18em]">
                   Простая логика
                 </p>
-                <p className="mt-3 text-xl md:text-2xl md:font-black leading-tight">
+                <p className="mt-3 text-base md:text-2xl leading-tight">
                   Не спорьте с цифрами. Протестируйте Human+ на своей команде и
                   посмотрите, окупается ли снижение нагрузки.
                 </p>
@@ -615,10 +615,10 @@ export default function Home() {
         </Reveal>
       </section>
 
-      <section className="px-6 md:px-16 py-24 text-center md:text-left">
+      <section className="md:px-16 py-24 text-center md:text-left">
         <Reveal>
-          <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-12 items-center rounded-[36px] border border-white/10 bg-white/[0.03] p-8 md:p-12 overflow-hidden relative">
-            <div className="absolute -right-24 -top-24 h-64 w-64 rounded-full bg-[#00ff8c]/15 blur-3xl" />
+          <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-12 items-center rounded-[36px] md:border border-white/10 bg-white/[0.03] p-8 md:p-12 overflow-hidden relative">
+            <div className="hidden md:absolute -right-24 -top-24 h-64 w-64 rounded-full bg-[#00ff8c]/15 blur-3xl" />
 
             <div className="relative">
               <p className="text-[#00ff8c] uppercase tracking-[0.25em] text-xs font-black">
@@ -665,7 +665,7 @@ export default function Home() {
                       {num}
                     </span>
 
-                    <div>
+                    <div className="text-left">
                       <h3 className="md:text-xl font-black text-white">
                         {title}
                       </h3>
