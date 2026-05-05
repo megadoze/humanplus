@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     title: "Экзоскелеты для бизнеса | Human+",
     description:
       "До 40% снижения нагрузки и рост производительности. Тестируйте экзоскелеты в реальной работе за 7 дней.",
-    url: "https://humanplus.work",
+    url: "https://humanplus.vercel.app",
     siteName: "Human+",
     images: [
       {
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     images: ["/images/og.jpg"],
   },
 
-  metadataBase: new URL("https://humanplus.work"),
+  metadataBase: new URL("https://humanplus.vercel.app"),
 };
 
 export default function RootLayout({
