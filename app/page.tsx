@@ -283,7 +283,7 @@ export default function Home() {
             Problem
           </p>
 
-          <h2 className="mt-4 max-w-4xl text-4xl md:text-6xl font-black md:leading-[0.95] tracking-[-0.04em]">
+          <h2 className="mt-4 max-w-4xl text-3xl md:text-6xl font-black md:leading-[0.95] tracking-[-0.04em]">
             Физическая работа <br />
             <span> не должна ломать людей</span>
           </h2>
@@ -316,7 +316,7 @@ export default function Home() {
             Solution
           </p>
 
-          <h2 className="mt-4 text-4xl md:text-6xl font-black md:leading-[0.95] tracking-[-0.04em]">
+          <h2 className="mt-4 text-3xl md:text-6xl font-black md:leading-[0.95] tracking-[-0.04em]">
             Усиливаем сотрудников, <br />
             <span>а не заменяем их</span>
           </h2>
@@ -348,7 +348,7 @@ export default function Home() {
 
           <Reveal delay={160}>
             <div>
-              <h2 className="text-4xl md:text-6xl font-black md:leading-[0.95] tracking-[-0.04em]">
+              <h2 className="text-3xl md:text-6xl font-black md:leading-[0.95] tracking-[-0.04em]">
                 Лучше один раз
                 <br />
                 увидеть в работе
@@ -389,7 +389,7 @@ export default function Home() {
             Process
           </p>
 
-          <h2 className="mt-4 text-4xl md:text-6xl font-black tracking-[-0.04em]">
+          <h2 className="mt-4 text-3xl md:text-6xl font-black tracking-[-0.04em]">
             Как это работает
           </h2>
         </Reveal>
@@ -423,7 +423,7 @@ export default function Home() {
                 Proof
               </p>
 
-              <h2 className="mt-4 text-4xl md:text-6xl font-black md:leading-[0.95] tracking-[-0.04em]">
+              <h2 className="mt-4 text-3xl md:text-6xl font-black md:leading-[0.95] tracking-[-0.04em]">
                 Эффект видно
                 <br />в первый день
               </h2>
@@ -471,7 +471,7 @@ export default function Home() {
                 Business case
               </p>
 
-              <h2 className="mt-4 text-4xl md:text-6xl font-black md:leading-[0.95] tracking-[-0.04em]">
+              <h2 className="mt-4 text-3xl md:text-6xl font-black md:leading-[0.95] tracking-[-0.04em]">
                 Травмы стоят дороже, чем тест
               </h2>
 
@@ -531,7 +531,7 @@ export default function Home() {
                 Economics
               </p>
 
-              <h2 className="mt-4 text-4xl md:text-6xl font-black md:leading-[0.95] tracking-[-0.04em]">
+              <h2 className="mt-4 text-3xl md:text-6xl font-black md:leading-[0.95] tracking-[-0.04em]">
                 Сколько стоит
                 <br />
                 усталость?
@@ -582,7 +582,7 @@ export default function Home() {
 
       <section className="px-6 md:px-16 py-24 border-t border-white/10 text-center">
         <Reveal>
-          <h2 className="text-4xl md:text-6xl font-black">
+          <h2 className="text-3xl md:text-6xl font-black">
             Прозрачная модель без крупных вложений
           </h2>
 
@@ -601,7 +601,7 @@ export default function Home() {
             <Reveal key={label} delay={index * 120}>
               <div className="rounded-2xl border border-white/10 p-6">
                 <p className="text-sm text-white/50">{label}</p>
-                <p className="mt-2 text-xl md:text-4xl font-black">{price}</p>
+                <p className="mt-2 text-lg md:text-4xl font-black">{price}</p>
                 <p className="mt-2 text-white/50">{note}</p>
               </div>
             </Reveal>
@@ -625,7 +625,7 @@ export default function Home() {
                 7-day result
               </p>
 
-              <h2 className="mt-4 text-4xl md:text-6xl font-black md:leading-[0.95] tracking-[-0.04em]">
+              <h2 className="mt-4 text-3xl md:text-6xl font-black md:leading-[0.95] tracking-[-0.04em]">
                 Что покажет тест
                 <br />
                 за 7 дней
@@ -711,7 +711,7 @@ export default function Home() {
         className="mx-6 md:mx-16 mb-20 rounded-[36px] bg-[radial-gradient(circle_at_80%_20%,rgba(0,255,140,0.22),transparent_30%),#111] px-6 py-16 md:p-20 text-center"
       >
         <Reveal>
-          <h2 className="text-4xl md:text-6xl font-black tracking-[-0.04em]">
+          <h2 className="text-3xl md:text-6xl font-black tracking-[-0.04em]">
             Попробуйте Human+ на своей команде
           </h2>
 
