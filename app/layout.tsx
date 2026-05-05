@@ -23,9 +23,49 @@ const exo = Exo_2({
 });
 
 export const metadata: Metadata = {
-  title: "Exoskeleton Solutions | Human+",
+  title:
+    "Экзоскелеты для снижения нагрузки и роста производительности | Human+",
+
   description:
-    "Помогаем компаниям уменьшить травмы и усталость сотрудников с помощью промышленных экзоскелетов.",
+    "Снижайте нагрузку на сотрудников до 40% и повышайте производительность с помощью промышленных экзоскелетов Human+. Тест без риска за 7 дней.",
+
+  keywords: [
+    "экзоскелет",
+    "промышленные экзоскелеты",
+    "снижение нагрузки сотрудников",
+    "эргономика труда",
+    "производительность сотрудников",
+    "экзоскелет для спины",
+    "warehouse exoskeleton",
+  ],
+
+  openGraph: {
+    title: "Экзоскелеты для бизнеса | Human+",
+    description:
+      "До 40% снижения нагрузки и рост производительности. Тестируйте экзоскелеты в реальной работе за 7 дней.",
+    url: "https://humanplus.work",
+    siteName: "Human+",
+    images: [
+      {
+        url: "/images/suitx.avif",
+        width: 1200,
+        height: 630,
+        alt: "Human+ Exoskeleton",
+      },
+    ],
+    locale: "ru_RU",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Экзоскелеты для бизнеса | Human+",
+    description:
+      "Снижение нагрузки до 40% и рост производительности сотрудников.",
+    images: ["/images/suitx.avif"],
+  },
+
+  metadataBase: new URL("https://humanplus.work"),
 };
 
 export default function RootLayout({
