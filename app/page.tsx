@@ -2,7 +2,7 @@
 
 import { ReactNode, useEffect, useRef, useState } from "react";
 
-const typedText = "производительность до 40%";
+const typedText = "до 40%";
 
 function Equalizer({ muted }: { muted: boolean }) {
   return (
@@ -187,8 +187,10 @@ export default function Home() {
               Exoskeleton Solutions
             </p>
 
-            <h1 className="mt-6 text-[clamp(1.8rem,7vw,3rem)] md:text-6xl xl:text-6xl 2xl:text-7xl font-black leading-[1.1] xl:leading-[0.95] tracking-[-0.04em]">
-              <span className="block animate-fade-up">Увеличьте силу и</span>
+            <h1 className="mt-6 text-[clamp(1.8rem,10vw,3rem)] md:text-6xl xl:text-6xl 2xl:text-7xl font-black leading-[1.1] xl:leading-[0.95] tracking-[-0.04em]">
+              <span className="block animate-fade-up">
+                Увеличьте эффективность команды
+              </span>
 
               <span className="block min-h-[2.1em] md:min-h-[1.1em]">
                 <span className="typing-line pb-2">
@@ -209,9 +211,9 @@ export default function Home() {
               className="mt-6 max-w-2xl md:text-lg md:text-xl text-white/55 leading-relaxed animate-fade-up"
               style={{ animationDelay: "350ms" }}
             >
-              Human+ помогает компаниям ускорять физические операции, повышать
-              эффективность сотрудников и снижать потери с помощью промышленных
-              экзоскелетов.
+              Экзоскелеты Human+ усиливают сотрудников в реальной работе:
+              команда дольше держит темп, выполняет больше задач и снижает
+              потери без изменения процессов.
             </p>
 
             <div

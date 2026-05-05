@@ -96,12 +96,13 @@ body {
 .typing-line {
   display: inline;
   max-width: 100%;
-  background: linear-gradient(90deg, #ffffff 0%, #ffffff 55%, #00ff8c 100%);
+  /* background: linear-gradient(90deg, #ffffff 0%, #ffffff 55%, #00ff8c 100%); */
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   overflow-wrap: anywhere;
   word-break: normal;
+  background-color: #00ff8c;
 }
 
 .typing-line {
